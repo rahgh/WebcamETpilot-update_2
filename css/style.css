@@ -1,0 +1,221 @@
+html {
+    font-family: system-ui;
+    height: 100%; /* Ensure the body takes full height */
+    margin: 0; /* Remove default margin */
+    padding:0;
+	overflow: hidden; /* Disable scrolling */
+    align-items: center; /* Vertically center */
+    justify-content: center; /* Horizontally center */
+}
+
+#header
+{
+	position: relative;
+    top: 0px;
+    left: 0px;
+    height: 32px;
+    background: #007D1C;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+
+}
+
+/* calibration and canvas styling */
+#calibration-container {
+    text-align: center;
+}
+
+/* button styling */
+.button {
+    width: 30px;
+    height: 30px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid black;
+    color: white;
+    background-color: red;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    overflow: hidden;
+    text-align: center;
+    opacity: 0.2;
+    position: fixed;
+}
+
+/* modal styles */
+.modal {
+    display: none;  /* Modal is hidden by default */
+    position: fixed;  /* Make it appear over the content */
+    top: 50%;        /* Center vertically */
+    left: 50%;       /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for width/height offsets */
+    background-color: rgba(255, 255, 255, 1);
+    text-align: center;
+}
+
+.modal-content {
+    background-color: rgb(240,240,240);
+    padding: 10px;
+    border: 2px solid #888;
+	margin:auto;
+    width: 700px;
+    border-radius: 10px;
+    text-align: center;
+	position: relative;
+}
+
+
+.modal_1 {
+    display: none;  /* Modal is hidden by default */
+    position: fixed;  /* Make it appear over the content */
+    top: 55%;        /* Center vertically */
+    left: 50%;       /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for width/height offsets */
+    background-color: rgba(255, 255, 255, 1);
+    text-align: center;
+    z-index: 9999;  /* Ensure it's on top */
+    width: 90vw;    /* Set modal width relative to viewport width */
+    max-width: 600px; /* Don't let it exceed 600px */
+}
+
+.modal-content_1 {
+    padding: 5px;
+    border: 2px solid #888;
+    margin: auto;
+    width: 100%;    /* Relative width */
+    max-width: 700px;  /* Restrict the maximum width */
+    text-align: center;
+    position: relative;
+    box-sizing: border-box;  /* Include padding in width/height calculations */
+}
+
+.img-fluid {
+    width: 100%;   /* Image will take full width of its container */
+    height: auto;  /* Maintain aspect ratio */
+    max-width: 500px; /* Limit the maximum width */
+    display: block;
+    margin: 0 auto;
+}
+
+.modal-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 8px;
+}
+
+/* notice section */
+#notice {
+	position: relative;
+    background-color: #ffffff;
+    padding:1 px;
+    margin: 4px auto;
+    width: 100%;
+    max-width: 1050px;
+    border-radius: 8px;
+	text-align: center;
+}
+
+#notice p {
+	font-size: 18px;
+    margin-bottom: 3px;
+	font-weight: bold;
+}
+
+#notice span {
+    color: #0066FF;
+	font-weight: bold;
+}
+
+.custom-image {
+	position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 10%;
+    margin-bottom: 10px;
+}
+.maps-wrapper {
+    display: flex;
+    flex-direction: column; /* Arrange maps in a column */
+    align-items: center; /* Center maps horizontally */
+    width: 100%; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+}
+
+.map-container {
+    position: relative;
+    width: 100%; /* Set to 100% for responsiveness */
+    max-width: 100%; /* Set maximum width to 100% */
+    margin: 5px auto; /* Center the container horizontally */
+	text-align: center; /* Center the content */
+}
+/* Prevent scrolling on small screens */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 100%;
+        max-width: 100%; /* Make sure the modal fits smaller screens */
+    }
+}
+
+.survey-image {
+	position: relative;
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+
+/* video feed styling */
+
+#webgazerVideoContainer {
+	position: relative;
+    display: block !important;
+    position: fixed !important;
+    top:20px !important;
+    left: 0px !important;
+    width: 320px !important; 
+    height: 220px !important; 
+    z-index: 9999 !important;
+}
+
+/* Adjust the size of the video element itself */
+#webgazerVideoFeed {
+    width: 100% !important; /* Ensure the video takes up 100% of the container's width */
+    height: 100% !important; /* Ensure the video takes up 100% of the container's height */
+    object-fit: cover;       /* Optionally, use object-fit to control how the video fits in the container */
+}
+
+#accuracy a{
+    background-color: #222;
+    color: #eee;
+    left: -15px;
+    padding-left: 80px;
+    padding-right: 40px;
+}
+
+#accuracy {
+    background-color: #222;
+    padding-left: inherit;
+}
+
+/*li {
+    padding-left: 50px;
+}*/
+
+/* Adjust for different devices with different screen sizes */
+@media only screen and (min-width: 481px) and (max-width: 1200px) {
+    .desk {
+        display: none; /* Hide desktop-specific elements */
+    }
+    .mob {
+        display: block; /* Show mobile-specific elements */
+    }
+}
