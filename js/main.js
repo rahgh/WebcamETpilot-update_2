@@ -1189,10 +1189,10 @@ function submitUserInfo() {
 	const geographyBackground = document.querySelector('input[name="geography"]:checked').value;
 
     if (age && gender) {
-        console.log('User Information:', `Age: ${age}, Gender: ${gender}, Geography Background: ${geographyBackground}`);
+        console.log('User Information:', `Age: ${age}, Gender: ${gender},  Cartography Background: ${CartographyBackground}`);
 
         // add user information to results
-        const userInfo = {'age': age, 'gender': gender ,'geographyBackground': geographyBackground};
+        const userInfo = {'age': age, 'gender': gender ,' cartographyBackground':  cartographyBackground};
         let results = {'user_info': userInfo};
 
         // save the results including user information only if not already saved
