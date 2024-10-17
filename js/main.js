@@ -381,12 +381,11 @@ function collectResults(eyeTrackingData, fixationData, surveyAnswer) {
             'fixation_end_at_ms': data.fixation_ends_at_ms});
     });
 
-    let results = {'eye_tracking_data': eye_tracking_data,
+     let results = {'calibration_accuracy': calibration_accuracy,'user_id': user_id,'eye_tracking_data': eye_tracking_data,
         'fixation_data': fixation_data,
         'survey_answer': surveyAnswer};
     return results;
 }
-
 
 function resetWebGazerData() {
     eyeTrackingData = []; // array to store eye tracking data
